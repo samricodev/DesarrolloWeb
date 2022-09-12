@@ -15,15 +15,16 @@ body {
 }
 
 header{
-    background-color: #C0A072 ;
-    color: #fff;
+    height: 75px;
+    width: 100%;
+    align-items: center;
+    color: #000;
 }
 
 nav {
     padding: 5px;
     display: flex;
     flex-direction: row;
-    color: #fff;
 }
 
 nav ul{
@@ -36,8 +37,9 @@ nav ul{
 
 nav ul li{
     padding: 5px;
-    color: #fff;
     list-style: none;
+    color: #000;
+    font-weight: bold;
 }
 
 a{
@@ -47,15 +49,15 @@ a{
 }
 
 a li:hover {
-    color: #4F77B0;
+    color: #23802f;
 }
 
 a h1 {
-    color: #fff;
+    color: #000;
 }
 
 a h1:hover{
-    color: #4F77B0;
+    color: #23802f;
 }
 
 .logo{
@@ -63,8 +65,9 @@ a h1:hover{
 }
 
 .cover {
+    width: 100%;
     color:white;
-    height: 89.75vh;
+    height: 400px;
     font-size: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -79,7 +82,7 @@ a h1:hover{
 
 .cover2 {
     color:white;
-    height:91vh;
+    height: 400px;
     font-size: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -94,7 +97,7 @@ a h1:hover{
 
 .btn-cover{
     color: white;
-    background-color: #B0884F;
+    background-color: #23802f;
     margin-top: 5px ;
     border: none;
     padding: 10px;
@@ -102,9 +105,8 @@ a h1:hover{
 }
 
 .btn{
-    width: 100%;
     color: white;
-    background-color: #B0884F;
+    background-color: #23802f;
     margin-top: 5px ;
     border: none;
     padding: 10px;
@@ -112,11 +114,11 @@ a h1:hover{
 }
 
 .btn:hover {
-    background-color: #4F77B0   ;
+    background-color: #B0884F;
 }
 
 .btn-cover:hover {
-    background-color: #4F77B0   ;
+    background-color: #B0884F;
 }
 
 section {
@@ -207,9 +209,9 @@ form{
 footer{
     color: #000 ;
     font-style:italic;
-    background-color: #C0A072;
-    padding: 1em 0;
+    padding: 20px;
     width: 100%;
     text-align: center;
-    margin-top: auto;
+    margin-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0,0.5) ;
 }
