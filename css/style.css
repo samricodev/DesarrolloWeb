@@ -15,14 +15,14 @@ body {
 }
 
 header{
-    height: 75px;
+    padding: 10px;
+    height: 50px;
     width: 100%;
     align-items: center;
     color: #000;
 }
 
 nav {
-    padding: 5px;
     display: flex;
     flex-direction: row;
 }
