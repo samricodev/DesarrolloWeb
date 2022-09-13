@@ -59,6 +59,26 @@ a:hover {
     margin-right: 10%;
 }
 
+.containerx{
+    margin-top: 20px;
+    text-align: justify;
+    font-size: 1.5em;
+    columns: 2;
+}
+
+.containerx p{
+    position: relative;
+    float: left;
+}
+
+.containerx img{
+    position: relative;
+    float: right;
+    width: 320px;
+    height: 213px;
+    margin-top: 20px;
+}
+
 p{
     text-align: justify;
 }
