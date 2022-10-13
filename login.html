@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Login</title>
+</head>
+<body>
+<header>
+        <nav>
+            <a href="index.html" class="logo"><h1>SamCoffee</h1></a>
+            <ul>
+                <a href="index.html"><li>Inicio</li></a>
+                <a href="#"><li>Ingresar</li></a>
+                <a href="products.html"><li>Productos</li></a>
+                <a href="index.html#mapa"><li>Contáctanos</li></a>
+            </ul>
+        </nav>
+    </header>
+    <div class="cover2">
+        <h2>SamCoffee</h2>
+        <p>El mejor café del condado</p>
+    </div>
+    <div class="container-center">
+        <h3>Inicia sesión</h3>
+        <p>Bienvenido de nuevo! Ingresa para ver las nuevas aventuras que tenemos para ti.</p>
+        <form action="./login.php" method="post">
+            <label for="email">Correo</label>
+            <input type="email" name="email" id="email">
+            <label for="pass">Contraseña</label>
+            <input type="password" name="pass" id="pass">
+            <button  type="submit" class="btn">Enviar</button>
+            <a id="enlace" href="./register.html">No tengo cuenta</a>
+        </form>
+    </div>
+    <footer>
+        <div>
+            <p>©️ 2022 SamCoffee Company Reservados todos los derechos</p>
+        </div>
+    </footer>
+</body>
+</html>
