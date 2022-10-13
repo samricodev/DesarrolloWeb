@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" type="image/jpg" href="/assets/taza-de-cafe.png"/>
-    <title>Registro</title>
+    <title>Ingresar</title>
 </head>
 <body>
     <header>
@@ -14,18 +14,20 @@
             <a href="index.html" class="logo"><h1>SamCoffee</h1></a>
             <ul>
                 <a href="index.html"><li>Inicio</li></a>
-                <a href="#"><li>Registro</li></a>
+                <a href="#"><li>Ingresar</li></a>
                 <a href="products.html"><li>Productos</li></a>
                 <a href="index.html#mapa"><li>Contáctanos</li></a>
             </ul>
         </nav>
     </header>
-    <div class="cover">
+    <div class="cover2">
         <h2>SamCoffee</h2>
+        <p>El mejor café del condado</p>
     </div>
     <div class="container-center">
         <h3>Registrate</h3>
-        <form action="products.html">
+        <p>Forma parte de esta maravillosa cafeteria y disfruta de nuestros productos</p>
+        <form action="/register.php" method="post">
             <label for="">Nombre</label>
             <input type="text" name="nombre" id="nombre"  required/>
             <label for="apellido">Apellido</label>
@@ -34,7 +36,8 @@
             <input type="email" name="email" id="email">
             <label for="pass">Contraseña</label>
             <input type="password" name="pass" id="pass">
-            <button class="btn">Enviar</button>
+            <button  type="submit" class="btn">Enviar</button>
+            <a id="enlace" href="./login.html">Ya tengo cuenta</a>
         </form>
     </div>
     <footer>
