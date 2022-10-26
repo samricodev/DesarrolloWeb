@@ -1,22 +1,22 @@
 <?php
 
-$db_name = "samcoffe_bd";
-$db_host = "localhost";
-$db_user = "root";
-$db_password = "";
+include 'main.php';
 
 $email = $_POST['email'];
 $pass = $_POST['pass'];
 
-$connect = mysqli_connect($db_host,$db_user,$db_password,$db_name);
+$consulta = mysqli_query($connect,"SELECT * FROM user WHERE email = '$email' && password = '$pass'");
 
-if(!$connect){
-    die("Error". mysqli_connect_error());
+$filas = mysqli_fetch_array($consulta);
+
+if($filas){
+    session_start();
+    $_SESSION['email'] = $email;
+    header('location: products.html');
+} else {
+    header('location: login.html');
+    echo "<h3>Error de autenticación</h3>";
 }
-
-echo "Connected..";
-
-
 
 mysqli_close($connect);
 
