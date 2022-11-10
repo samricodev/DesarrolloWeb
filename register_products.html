@@ -30,10 +30,14 @@
         <form action="register_products.php" method="post">
             <label for="">Nombre</label>
             <input type="text" name="nombre" id="nombre"  required/>
+            <label for="descripcion">Descripcion</label>
+            <input type="text" name="descripcion" id="descripcion" required>
             <label for="contenido">Contenido en ml.</label>
             <input type="text" name="contenido" id="contenido" required/>
             <label for="precio">Precio</label>
             <input type="number" name="precio" id="precio">
+            <label for="imagen">Link de imagen</label>
+            <input type="text" id="imagen" name="imagen" required>
             <button  type="submit" class="btn">Enviar</button>
         </form>
     </div>
