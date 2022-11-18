@@ -1,6 +1,6 @@
 <?php
 
-include 'conexion.php';
+include 'main.php';
 
 $id_product = $_POST['id'];
 $nombre=$_POST['name'];
@@ -13,6 +13,6 @@ $sql="UPDATE product SET name='$nombre',price='$precio',content='$contenido',des
 $query=mysqli_query($con,$sql);
 
     if($query){
-        Header("Location: alumno.php");
+        Header("Location: r_products.php");
     }
 ?>

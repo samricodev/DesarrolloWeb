@@ -79,10 +79,10 @@ $query = mysqli_query($connect, $sql);
                         <th><?php echo $row['description'] ?></th>
                         <th><?php echo $row['image'] ?></th>
                         <th>
-                            <a href="actualizar.php?id=<?php echo $row['id'] ?>" class="btn btn-info">Editar</a>
+                            <a href="update.php?id=<?php echo $row['id'] ?>" class="btn btn-info">Editar</a>
                         </th>
                         <th>
-                            <a href="delete.php?id=<?php echo $row['id'] ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="eliminar.php?id=<?php echo $row['id'] ?>" class="btn btn-danger">Eliminar</a>
                         </th>
                     </tr>
                 <?php

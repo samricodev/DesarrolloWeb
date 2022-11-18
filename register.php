@@ -7,7 +7,7 @@ $apellido = $_POST['apellido'];
 $email = $_POST['email'];
 $pass = $_POST['pass'];
 
-$insertion = "INSERT INTO user (id, name, last_name, email, password) VALUES ('0','$nombre','$apellido','$email','$pass')";
+$insertion = "INSERT INTO users (id, name, last_name, email, password) VALUES ('0','$nombre','$apellido','$email','$pass')";
 
 $set_insertion = mysqli_query($connect,$insertion);
 

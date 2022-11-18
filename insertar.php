@@ -8,7 +8,7 @@ $precio = $_POST['precio'];
 $descripcion = $_POST['descripcion'];
 $imagen = $_POST['imagen'];
 
-$insertion_products = "INSERT INTO products (id, name, price, content, description, image) VALUES ('0','$nombre','$precio','$contenido','$descripcion','$imagen')";
+$insertion_products = "INSERT INTO product (id, name, price, content, description, image) VALUES ('0','$nombre','$precio','$contenido','$descripcion','$imagen')";
 
 $set_insertion_products = mysqli_query($connect,$insertion_products);
 
