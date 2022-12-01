@@ -1,7 +1,7 @@
 <?php
 include 'main.php';
 
-$sql = "SELECT *  FROM products";
+$sql = "SELECT *  FROM product";
 $query = mysqli_query($connect, $sql);
 ?>
 <!DOCTYPE html>
@@ -72,18 +72,18 @@ $query = mysqli_query($connect, $sql);
                 while ($row = mysqli_fetch_array($query)) {
                 ?>
                     <tr>
-                        <th><?php echo $row['id'] ?></th>
-                        <th><?php echo $row['name'] ?></th>
-                        <th><?php echo $row['price'] ?></th>
-                        <th><?php echo $row['content'] ?></th>
-                        <th><?php echo $row['description'] ?></th>
-                        <th><?php echo $row['image'] ?></th>
-                        <th>
-                            <a href="update.php?id=<?php echo $row['id'] ?>" class="btn btn-info">Editar</a>
-                        </th>
-                        <th>
+                        <td><?php echo $row['id'] ?></td>
+                        <td><?php echo $row['name'] ?></td>
+                        <td><?php echo $row['price'] ?></td>
+                        <td><?php echo $row['content'] ?></td>
+                        <td><?php echo $row['description'] ?></td>
+                        <td><?php echo $row['image'] ?></td>
+                        <td>
+                            <a href="vista_update.php?id=<?php echo $row['id'] ?>" class="btn btn-info">Editar</a>
+                        </td>
+                        <td>
                             <a href="eliminar.php?id=<?php echo $row['id'] ?>" class="btn btn-danger">Eliminar</a>
-                        </th>
+                        </td>
                     </tr>
                 <?php
                 }

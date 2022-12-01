@@ -10,5 +10,4 @@ if(!$connect){
     die("Error". mysqli_connect_error());
 }
 
-echo "Connected..";
 ?>

@@ -13,7 +13,7 @@ $insertion_products = "INSERT INTO product (id, name, price, content, descriptio
 $set_insertion_products = mysqli_query($connect,$insertion_products);
 
 if($set_insertion_products){
-    header('location: register_products.html');
+    header('location: r_products.php');
 } else{
     echo '<h3>Registro de producto denegado</h3>';
 }
