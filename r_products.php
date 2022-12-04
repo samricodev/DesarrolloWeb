@@ -27,11 +27,8 @@ $query = mysqli_query($connect, $sql);
                 <a href="#">
                     <li>Ingresar</li>
                 </a>
-                <a href="products.html">
+                <a href="products.php">
                     <li>Productos</li>
-                </a>
-                <a href="index.html#mapa">
-                    <li>Contáctanos</li>
                 </a>
             </ul>
         </nav>
@@ -40,8 +37,8 @@ $query = mysqli_query($connect, $sql);
         <h2>SamCoffee</h2>
         <p>El mejor café del condado</p>
     </div>
-    <h1 class="titulo">Ingrese el producto</h1>
-    <form action="insertar.php" method="POST">
+    <h1 class="titulo">Administrar Productos</h1>
+    <form action="insertar.php" method="POST" class="formu">
             <label for="nombre">Nombre</label>
             <input type="text" name="nombre" id="nombre"  required/>
             <label for="descripcion">Descripcion</label>
@@ -52,7 +49,7 @@ $query = mysqli_query($connect, $sql);
             <input type="number" name="precio" id="precio">
             <label for="imagen">Link de imagen</label>
             <input type="text" id="imagen" name="imagen" required>
-            <button  type="submit" class="btn">Enviar</button>
+            <button  type="submit" class="btn">Agregar</button>
     </form>
     <section class="grillita">
         <table>
@@ -93,7 +90,14 @@ $query = mysqli_query($connect, $sql);
     </section>
     <footer>
         <div>
-            <p>©️ 2022 SamCoffee Company Reservados todos los derechos</p>
+            <ul>
+                <li><a href="#"><img src="./assets//facebook.png"></a></li>
+                <li><a href="#"><img src="./assets/instagram.png"></a></li>
+                <li><a href="#"><img src="./assets/twitter.png"></a></li>
+            </ul>
+        </div>
+        <div>
+            <p>SamCoffee ©️ Todos los derechos reservados</p>
         </div>
     </footer>
 </body>

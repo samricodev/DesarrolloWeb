@@ -1,3 +1,10 @@
+<?php
+    include "main.php";
+
+    $sql = "SELECT *  FROM product";
+    $query = mysqli_query($connect, $sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +22,9 @@
             <ul>
                 <a href="index.html"><li>Inicio</li></a>
                 <a href="login.html"><li>Ingresar</li></a>
-                <a href="#"><li>Productos</li></a>
-                <a href="index.html#mapa"><li>Contáctanos</li></a>
+                <a href="carrito.php">
+                    <li><img src="./assets/carrito-de-compras.png" alt=""></li>
+                </a>
             </ul>
         </nav>
     </header>
@@ -32,19 +40,34 @@
         </p>
     </div>
     <div class="products">
+        <?php while($row = mysqli_fetch_array($query)){
+        ?>
         <div class="product">
             <div class="img-products">
-                <img src="./assets/cafe-proceso.jpg" alt="cafe">
+                <img src="<?php echo $row['image']?>" alt="<?php echo $row['description']?>">
             </div>
             <div>
-                <p>Espresso - <b>$200</b></p>
-                <button class="btn">Agregar</button>
+                <p><?php echo $row['name']?></p>
+                <p><b>$<?php echo $row['price']?></b></p>
+                <form action="carrito.php" method="get">
+                    <button type="submit" class="btn" name="carrito" value="<?php echo $row['id']?>">Agregar</button>
+                </form>
             </div>
         </div>
+        <?php
+        }
+        ?>
     </div>
     <footer>
         <div>
-            <p>©️ 2022 SamCoffee Company Reservados todos los derechos</p>
+            <ul>
+                <li><a href="#"><img src="./assets//facebook.png"></a></li>
+                <li><a href="#"><img src="./assets/instagram.png"></a></li>
+                <li><a href="#"><img src="./assets/twitter.png"></a></li>
+            </ul>
+        </div>
+        <div>
+            <p>SamCoffee ©️ Todos los derechos reservados</p>
         </div>
     </footer>
 </body>
