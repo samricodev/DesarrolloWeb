@@ -12,6 +12,26 @@ $query = mysqli_query($connect, $sql);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/style.css" rel="stylesheet" />
+    <style>
+        table{
+            width: 100%;
+            background-color: #efefef;
+            border-collapse: collapse;
+        }
+        table thead{
+            margin-bottom: 20px;
+            background-color: #000;
+            color: #efefef;
+        }
+
+        table thead th{
+            padding: 5px;
+        }
+
+        table tbody tr .url{
+            text-align: justify;
+        }
+    </style>
 </head>
 
 <body>
@@ -27,11 +47,8 @@ $query = mysqli_query($connect, $sql);
                 <a href="#">
                     <li>Ingresar</li>
                 </a>
-                <a href="products.html">
+                <a href="products.php">
                     <li>Productos</li>
-                </a>
-                <a href="index.html#mapa">
-                    <li>Contáctanos</li>
                 </a>
             </ul>
         </nav>
@@ -40,8 +57,8 @@ $query = mysqli_query($connect, $sql);
         <h2>SamCoffee</h2>
         <p>El mejor café del condado</p>
     </div>
-    <h1 class="titulo">Ingrese el producto</h1>
-    <form action="insertar.php" method="POST">
+    <h1 class="titulo">Administrar Productos</h1>
+    <form action="insertar.php" method="POST" class="formu">
             <label for="nombre">Nombre</label>
             <input type="text" name="nombre" id="nombre"  required/>
             <label for="descripcion">Descripcion</label>
@@ -52,9 +69,9 @@ $query = mysqli_query($connect, $sql);
             <input type="number" name="precio" id="precio">
             <label for="imagen">Link de imagen</label>
             <input type="text" id="imagen" name="imagen" required>
-            <button  type="submit" class="btn">Enviar</button>
+            <button  type="submit" class="btn">Agregar</button>
     </form>
-    <section class="grillita">
+    <section>
         <table>
             <thead>
                 <tr>
@@ -64,6 +81,8 @@ $query = mysqli_query($connect, $sql);
                     <th>Contenido</th>
                     <th>Descripcion</th>
                     <th>URL imagen</th>
+                    <th>Opciones</th>
+                    <th></th>
                 </tr>
             </thead>
 
@@ -71,13 +90,13 @@ $query = mysqli_query($connect, $sql);
                 <?php
                 while ($row = mysqli_fetch_array($query)) {
                 ?>
-                    <tr>
+                    <tr class="filas">
                         <td><?php echo $row['id'] ?></td>
                         <td><?php echo $row['name'] ?></td>
                         <td><?php echo $row['price'] ?></td>
                         <td><?php echo $row['content'] ?></td>
                         <td><?php echo $row['description'] ?></td>
-                        <td><?php echo $row['image'] ?></td>
+                        <td class="url"><?php echo $row['image'] ?></td>
                         <td>
                             <a href="vista_update.php?id=<?php echo $row['id'] ?>" class="btn btn-info">Editar</a>
                         </td>
@@ -93,7 +112,14 @@ $query = mysqli_query($connect, $sql);
     </section>
     <footer>
         <div>
-            <p>©️ 2022 SamCoffee Company Reservados todos los derechos</p>
+            <ul>
+                <li><a href="#"><img src="./assets//facebook.png"></a></li>
+                <li><a href="#"><img src="./assets/instagram.png"></a></li>
+                <li><a href="#"><img src="./assets/twitter.png"></a></li>
+            </ul>
+        </div>
+        <div>
+            <p>SamCoffee ©️ Todos los derechos reservados</p>
         </div>
     </footer>
 </body>

@@ -20,7 +20,7 @@ $row=mysqli_fetch_array($query);
     </head>
     <body>
         <section>
-            <form action="update.php" method="POST">
+            <form action="update.php" method="POST" class="formu">
                     <input type="hidden" name="id" value="<?php echo $row['id']  ?>">    
                     <label for="nombre">Nombre</label>
                     <input type="text" name="nombre" value="<?php echo $row['name']  ?>">

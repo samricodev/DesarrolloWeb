@@ -124,6 +124,12 @@ a h1:hover{
     font-size: 1.2em;
 }
 
+.container-center p{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
 .btn-cover{
     color: white;
     background-color: #23802f;
@@ -134,10 +140,12 @@ a h1:hover{
 }
 
 .btn{
-    width: auto;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
     color: white;
     background-color: #23802f;
-    margin-top: 5px ;
+    margin-top: 10px ;
     border: none;
     padding: 10px;
     border-radius: 10px;
@@ -210,8 +218,9 @@ iframe {
     margin-left: 10%;
     margin-top: 20px;
     margin-bottom: 20px;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns:  33% 33% 33%;
 }
 
 .product {
@@ -230,7 +239,7 @@ iframe {
     height: 142.33px;
 }
 
-form{
+.formu{
     width: auto;
     margin-left: 30%;
     margin-right: 30%;
@@ -239,15 +248,28 @@ form{
     background-color: #efefef;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     box-shadow: 1px 2px 5px 1px rgba(0, 0, 0,0.5);
-    border-radius: 10px;
 }
 
-form input {
+.formu input {
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
     padding: 5px;
-    border-radius: 5px;
+    background-color: rgba(0, 0, 0,0.125);
+    border: 1px solid rgba(0, 0, 0,0.5);
+}
+
+.formu label{
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.formu .btn{
+    margin-left: 11% !important;
 }
 
 #enlace{
@@ -259,10 +281,33 @@ form input {
 }
 
 footer{
-    color: #000 ;
-    font-style:italic;
-    padding: 20px;
-    text-align: center;
     margin-top: 20px;
-    border-top: 1px solid rgba(0, 0, 0,0.5) ;
+    position: relative;
+    bottom: 0;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color:#000;
+}
+
+footer ul{
+    width: 50%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: auto;
+    margin: auto;
+}
+
+footer p{
+    text-align: center;
+}
+
+footer img{
+    margin-top: 0.75rem;
+    width: 32px;
+    height: 32px;
 }
