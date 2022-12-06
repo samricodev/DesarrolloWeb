@@ -19,7 +19,7 @@ if($filas_admin){
 }else if($filas){
     session_start();
     $_SESSION['email'] = $email;
-    header('location: products.html');
+    header('location: products.php');
 } else {
     header('location: login.html');
     echo "<h3>Error de autenticación</h3>";
