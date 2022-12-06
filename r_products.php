@@ -134,7 +134,7 @@ $query = mysqli_query($connect, $sql);
                         <td><?php echo $row['price'] ?></td>
                         <td><?php echo $row['content'] ?></td>
                         <td><?php echo $row['description'] ?></td>
-                        <td class="url"><?php echo $row['image'] ?></td>
+                        <td><?php echo $row['image'] ?></td>
                         <td>
                             <a href="vista_update.php?id=<?php echo $row['id'] ?>" class="boton-editar">Editar</a>
                         </td>
@@ -150,14 +150,7 @@ $query = mysqli_query($connect, $sql);
     </section>
     <footer>
         <div>
-            <ul>
-                <li><a href="#"><img src="./assets//facebook.png"></a></li>
-                <li><a href="#"><img src="./assets/instagram.png"></a></li>
-                <li><a href="#"><img src="./assets/twitter.png"></a></li>
-            </ul>
-        </div>
-        <div>
-            <p>SamCoffee ©️ Todos los derechos reservados</p>
+            <p>©️ 2022 SamCoffee Company Reservados todos los derechos</p>
         </div>
     </footer>
 </body>
